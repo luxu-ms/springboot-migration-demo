@@ -1,0 +1,7 @@
+type: specs.openrewrite.org/v1beta/recipe
+name: org.luxu-ms.MyCustomRecipe
+displayName: My custom recipe
+description: Fix all the things.
+recipeList:
+  - org.openrewrite.java.migrate.UpgradeToJava17
+  - org.openrewrite.java.migrate.jakarta.JavaxMigrationToJakarta
