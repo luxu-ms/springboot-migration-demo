@@ -49,9 +49,38 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
+		        <groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
+		        <configuration>
+					<compilerVersion>17</compilerVersion>
+					<source>17</source>
+					<target>17</target>
+					<encodeing>UTF-8</encodeing>
+			        <compilerId>groovy-eclipse-compiler</compilerId>
+					<compilerArguments>
+						<javaAgentClass>lombok.launch.Agent</javaAgentClass>
+					  </compilerArguments>
+					<fork>true</fork>
+		        </configuration>
+		        <dependencies>
+			        <dependency>
+				        <groupId>org.codehaus.groovy</groupId>
+				        <artifactId>groovy-eclipse-compiler</artifactId>
+				        <version>3.7.0</version>
+			        </dependency>
+			        <dependency>
+				        <groupId>org.codehaus.groovy</groupId>
+				        <artifactId>groovy-eclipse-batch</artifactId>
+				        <version>3.0.8-01</version>
+			        </dependency>
+					<dependency>
+						<groupId>org.projectlombok</groupId>
+						<artifactId>lombok</artifactId>
+						<version>1.18.28</version>
+					</dependency>
+		        </dependencies>
+	        </plugin>
 		</plugins>
 	</build>
 
