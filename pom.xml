@@ -47,15 +47,9 @@
 
 		<dependency>
 			<groupId>com.atomikos</groupId>
-			<artifactId>transactions</artifactId>
+			<artifactId>transactions-spring-boot-starter</artifactId>
 			<version>5.0.9</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.atomikos</groupId>
-			<artifactId>transactions-jta</artifactId>
-			<version>5.0.9</version>
-		</dependency>
+		 </dependency>
 
 	</dependencies>
 
